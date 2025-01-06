@@ -280,21 +280,3 @@ def test_fetch_some_comment(base_url):
     for comment in comments:
         assert required_keys.issubset(comment.keys()), f"Missing keys in comment: {comment}"
         assert comment["postId"] == post_id, f"Comment does not belong to post ID {post_id}"
-  
-    
-
-
-    
-# @pytest.fixture(scope="function")
-# def create_test_post(base_url):
-#     # Create a post
-#     payload = {"title": "Test Post", "body": "This is a test post.", "userId": 1}
-#     response = requests.post(f"{base_url}/posts", json=payload)
-#     assert response.status_code == 201
-#     post_id = response.json()["id"]
-
-#     # Yield the post ID to the test
-#     yield post_id
-
-#     # Cleanup
-#     requests.delete(f"{base_url}/posts/{post_id}")
