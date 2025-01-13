@@ -1,0 +1,28 @@
+# Ignore .env files to keep sensitive information private
+.env
+
+# Ignore virtual environment directories
+venv/
+.venv/
+
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+
+# Ignore test result files
+*.log
+*.xml
+*.json
+
+# Ignore IDE/editor-specific files
+.vscode/
+.idea/
+
+# Ignore system-specific files
+.DS_Store  # macOS
+Thumbs.db  # Windows
+
+# Ignore pytest and coverage configuration files
+.coverage
+.coverage.*
+*.coveragerc
